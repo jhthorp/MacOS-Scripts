@@ -72,7 +72,7 @@ A script to execute a command as the administrator.
 _Usage_
 
 ```
-[bash] ./run_as_admin.sh <cmd>
+[bash] ./run_as_admin.sh [auto_skip] <cmd>
 ```
 
 _Options_
@@ -85,11 +85,13 @@ _Parameters_
 
 |         Parameter         |                   Description                    |
 |           :---:           |                      :---:                       |
+|      Automated Skip       |            Continue without prompting            |
 |          Command          |                  Command to run                  |
 
 _Examples_
 
 * **./run_as_admin.sh** "pwd"
+* **./run_as_admin.sh** "auto_skip" "pwd"
 
 #### run_as_user.sh
 
@@ -98,7 +100,7 @@ A script to execute a command as a specific user.
 _Usage_
 
 ```
-[bash] ./run_as_user.sh <user> <cmd>
+[bash] ./run_as_user.sh [auto_skip] <user> <cmd>
 ```
 
 _Options_
@@ -111,12 +113,14 @@ _Parameters_
 
 |         Parameter         |                   Description                    |
 |           :---:           |                      :---:                       |
+|      Automated Skip       |            Continue without prompting            |
 |           User            |            User to run the command as            |
 |          Command          |                  Command to run                  |
 
 _Examples_
 
 * **./run_as_user.sh** "user" "pwd"
+* **./run_as_user.sh** "auto_skip" "user" "pwd"
 
 ### Data
 
@@ -127,7 +131,7 @@ A script to list all available drives.
 _Usage_
 
 ```
-[bash] ./list_drives.sh
+[bash] ./list_drives.sh [auto_skip]
 ```
 
 _Options_
@@ -140,11 +144,12 @@ _Parameters_
 
 |         Parameter         |                   Description                    |
 |           :---:           |                      :---:                       |
-|            N/A            |                       N/A                        |
+|      Automated Skip       |            Continue without prompting            |
 
 _Examples_
 
 * **./list_drives.sh**
+* **./list_drives.sh** "auto_skip"
 
 ### Imaging
 
@@ -155,7 +160,7 @@ A script to burn an ISO image onto a chosen drive.
 _Usage_
 
 ```
-[bash] ./burn_iso_to_drive.sh <iso_file> <drive_id>
+[bash] ./burn_iso_to_drive.sh [auto_skip] <iso_file> <drive_id>
 ```
 
 _Options_
@@ -168,12 +173,14 @@ _Parameters_
 
 |         Parameter         |                   Description                    |
 |           :---:           |                      :---:                       |
+|      Automated Skip       |            Continue without prompting            |
 |         ISO File          |          ISO image to burn to the drive          |
 |         Drive ID          |       Drive ID to burn the ISO image onto        |
 
 _Examples_
 
 * **./burn_iso_to_drive.sh** "~/Documents/test_iso.iso" "da3"
+* **./burn_iso_to_drive.sh** "auto_skip" "~/Documents/test_iso.iso" "da3"
 
 _Drives Tested_
 
