@@ -93,8 +93,8 @@ DIR () { echo "${stack_vars[${#stack_vars[@]}-1]}"; }
 #===============================================================================
 run_as_user ()
 {
-  declare -r user="${1}"
-  declare -r cmd="${2}"
+  local user="${1}"
+  local cmd="${2}"
   su \
     "${user}" \
     -c "${cmd}"

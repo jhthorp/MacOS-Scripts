@@ -96,8 +96,8 @@ burn_iso_to_drive ()
   # Add parameters for INPUT_SOURCE, DISK_ID and PARTITION_ID
   # Intelligently handle disk vs drive partition
 
-  declare -r iso_file=${1}
-  declare -r drive_id=${2}
+  local iso_file=${1}
+  local drive_id=${2}
 
   # Unmount the disk/drive
   sudo diskutil \

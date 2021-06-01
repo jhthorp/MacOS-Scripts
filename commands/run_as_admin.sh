@@ -92,7 +92,7 @@ DIR () { echo "${stack_vars[${#stack_vars[@]}-1]}"; }
 #===============================================================================
 run_as_admin ()
 {
-  declare -r cmd="${1}"
+  local cmd="${1}"
 
   run_as_user \
     "admin" \
